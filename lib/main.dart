@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'navbar.dart';
 import 'utils/responsivelayout.dart';
 
+String _pp =
+    'https://www.freeprivacypolicy.com/live/33f0b9a9-e874-45e1-abaf-1a0793acc0f2';
+@override
 void main() {
   runApp(MyApp());
 }
@@ -117,6 +121,19 @@ class LargeChild extends StatelessWidget {
                       ),
                     ),
                   ),
+                  SizedBox(
+                    height: 40,
+                  ),
+                  TextButton(
+                      onPressed: () async {
+                        await canLaunch(_pp)
+                            ? await launch(_pp)
+                            : throw 'Could not launch $_pp';
+                      },
+                      child: Text(
+                        "Privacy Policy",
+                        style: TextStyle(color: Colors.black, fontSize: 16),
+                      )),
                 ],
               ),
             ),
@@ -128,7 +145,6 @@ class LargeChild extends StatelessWidget {
 }
 
 class SmallChild extends StatelessWidget {
-  @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
@@ -192,7 +208,19 @@ class SmallChild extends StatelessWidget {
             ),
             SizedBox(
               height: 30,
-            )
+            ),
+            Center(
+              child: TextButton(
+                  onPressed: () async {
+                    await canLaunch(_pp)
+                        ? await launch(_pp)
+                        : throw 'Could not launch $_pp';
+                  },
+                  child: Text(
+                    "Privacy Policy",
+                    style: TextStyle(color: Colors.black, fontSize: 16),
+                  )),
+            ),
           ],
         ),
       ),
