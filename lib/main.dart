@@ -75,7 +75,13 @@ class LargeChild extends StatelessWidget {
           FractionallySizedBox(
             alignment: Alignment.centerRight,
             widthFactor: .6,
-            child: Image.network("assets/mockup.png", scale: .85),
+            child: FadeInImage.assetNetwork(
+              placeholder: "assets/mockup.png",
+              image: "assets/mockup.png",
+              imageScale: .85,
+              fadeInDuration: const Duration(seconds: 1),
+              fadeInCurve: Curves.easeInCirc,
+            ),
           ),
           FractionallySizedBox(
             alignment: Alignment.centerLeft,
@@ -181,10 +187,13 @@ class SmallChild extends StatelessWidget {
               height: 30,
             ),
             Center(
-              child: Image.network(
-                "assets/mockup.png",
+              child: FadeInImage.assetNetwork(
+                placeholder: "assets/mockup.png",
+                image: "assets/mockup.png",
                 height: 500,
                 width: 250,
+                fadeInDuration: const Duration(seconds: 1),
+                fadeInCurve: Curves.easeInCirc,
               ),
             ),
             SizedBox(
