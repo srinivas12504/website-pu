@@ -116,16 +116,8 @@ class LargeChild extends StatelessWidget {
                   Container(
                     height: 100,
                     width: 350,
-                    child: ConstrainedBox(
-                      constraints: BoxConstraints.expand(),
-                      child: Ink.image(
-                        image: AssetImage("assets/gl.png"),
-                        fit: BoxFit.fill,
-                        child: InkWell(
-                          onTap: () {},
-                        ),
-                      ),
-                    ),
+                    child: ElevatedButton(
+                        onPressed: () {}, child: Image.asset("assets/gl.png")),
                   ),
                   SizedBox(
                     height: 40,
@@ -203,16 +195,8 @@ class SmallChild extends StatelessWidget {
               child: Container(
                 height: 50,
                 width: 175,
-                child: ConstrainedBox(
-                  constraints: BoxConstraints.expand(),
-                  child: Ink.image(
-                    image: AssetImage("assets/gl.png"),
-                    fit: BoxFit.fill,
-                    child: InkWell(
-                      onTap: () {},
-                    ),
-                  ),
-                ),
+                child: ElevatedButton(
+                    onPressed: () {}, child: Image.asset("assets/gl.png")),
               ),
             ),
             SizedBox(
