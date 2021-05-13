@@ -26,7 +26,7 @@ class _NavBarState extends State<NavBar> {
               Container(
                 width: 60,
                 height: 60,
-                child: Image.network("assets/slogo.png"),
+                child: Image.asset("assets/slogo.png"),
               ),
               SizedBox(width: 16),
               Text(
@@ -80,7 +80,7 @@ class _NavBarState extends State<NavBar> {
               SizedBox(width: 18),
               IconButton(
                 tooltip: "Our Facebook page",
-                icon: Image.asset("fb.png"),
+                icon: Image.asset("assets/fb.png"),
                 onPressed: () async {
                   await canLaunch(_fb)
                       ? await launch(_fb)
@@ -90,7 +90,7 @@ class _NavBarState extends State<NavBar> {
               SizedBox(width: 10),
               IconButton(
                 tooltip: "Our Instagram page",
-                icon: Image.asset("ig.png"),
+                icon: Image.asset("assets/ig.png"),
                 onPressed: () async {
                   await canLaunch(_insta)
                       ? await launch(_insta)
@@ -102,7 +102,7 @@ class _NavBarState extends State<NavBar> {
             Row(
               children: [
                 IconButton(
-                  icon: Image.asset("fb.png"),
+                  icon: Image.asset("assets/fb.png"),
                   tooltip: "Our Facebook page",
                   onPressed: () async {
                     await canLaunch(_fb)
@@ -112,7 +112,7 @@ class _NavBarState extends State<NavBar> {
                 ),
                 SizedBox(width: 10),
                 IconButton(
-                  icon: Image.asset("ig.png"),
+                  icon: Image.asset("assets/ig.png"),
                   tooltip: "Our Instagram page",
                   onPressed: () async {
                     await canLaunch(_insta)

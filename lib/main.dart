@@ -206,7 +206,7 @@ class SmallChild extends StatelessWidget {
                 child: ConstrainedBox(
                   constraints: BoxConstraints.expand(),
                   child: Ink.image(
-                    image: AssetImage("gl.png"),
+                    image: AssetImage("assets/gl.png"),
                     fit: BoxFit.fill,
                     child: InkWell(
                       onTap: () {},
